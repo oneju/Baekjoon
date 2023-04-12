@@ -10,6 +10,6 @@ for i in range(N):
     n = int(input())
     for a in range(n//2,1,-1):
         b = n-a
-        if (isPrime(a)==True)and(isPrime(b)==True):
+        if isPrime(a) and isPrime(b):
             print(f"{a} {b}")
             break

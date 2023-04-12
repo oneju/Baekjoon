@@ -3,8 +3,8 @@ N = int(input())
 numlst = input().split(" ")
 cnt = 0
 
-for i in numlst:
-    num = int(i)
+for i in range(N):
+    num = int(numlst[i])
     
     r = 0
     if num == 1:
