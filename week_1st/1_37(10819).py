@@ -39,11 +39,3 @@ def generate(chosen, used):
 generate([], used)
 
 print(result)
-
-'''for i in perms:
-    sum=0
-    for j in range(N-1):
-        sum+=abs(i[j]-i[j+1])
-    m = max(m,sum)
-print(m)
-'''
