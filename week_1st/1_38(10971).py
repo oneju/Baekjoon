@@ -27,22 +27,17 @@ def DFS(start, cur, cnt, val):
     
     global cost
     #start -> cur, cnt
-    if cnt==N and lst[cur][start]:               # 방문 수가 
-        cost = min(cost,val+lst[cur][start])       # 최소비용 저장
+    if cnt==N and lst[cur][start]:                # 방문 수가 n이면서 시작 도시로 가는 길이 있다면
+        cost = min(cost,val+lst[cur][start])      # 최소비용 저장
         return
-    if val > cost:                                 # 계산 비용이 최소 비용보다 커지면 탈출
+    if val > cost:                                # 계산 비용이 최소 비용보다 커지면 탈출
         return
     for i in range(N): #lst[][] 순회
-        if lst[cur][i] and visited[i] == False:
-            visited[i] = True
-            DFS(start, i, cnt+1, val+lst[cur][i])
-            visited[i] = False
-'''
-if not visited[i] and lst[start][i] != 0:
-    visited[i] = True
-    DFS(i,cnt+1,val+lst[start][i])
-    visited[i] = False
-'''
+        if lst[cur][i] and visited[i] == False:   # i에 갈 수 있으며, 방문하지 않았다면 
+            visited[i] = True                     # 방문 표시
+            DFS(start, i, cnt+1, val+lst[cur][i]) # recursion
+            visited[i] = False                    # recursion 끝나면 방문 표시 지우기
+
 for i in range(N): #lst[] 순회
     visited[i] = True
     DFS(i,i,1,0)
