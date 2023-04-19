@@ -15,9 +15,11 @@ def set(i):
     global cnt
     
     for j in range(N):
+        # 대각선, row 비어있다면!
         if(not flag_a[j] and
            not flag_b[i+j] and
            not flag_c[i-j+N-1]):
+            
             pos[i] = j
             if i==N-1:
                 cnt+=1
