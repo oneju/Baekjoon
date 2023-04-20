@@ -15,10 +15,9 @@ ppap = ['P','P','A','P']
 for a in S:
     stack.append(a)
     if stack[-4:] == ppap:
-        for _ in range(4):stack.pop()        
-        stack.append('P')
+        for _ in range(3):stack.pop()
         
-if stack == ['P'] or stack == ppap:
+if stack == ['P']:
     print("PPAP")
 else:
     print("NP")
