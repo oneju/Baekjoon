@@ -4,10 +4,7 @@ string = input().split('-')
 ans = 0
 arr = []
 for s in string:
-    lst = s.split('+')
-    pl = 0
-    for i in lst:
-        pl+=int(i)
+    pl = sum(list(map(int,s.split('+'))))
     arr.append(pl)
 ans = arr[0]
 for a in arr[1:]:
