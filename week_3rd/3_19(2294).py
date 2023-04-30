@@ -5,6 +5,7 @@ from collections import deque
 input = sys.stdin.readline
 n,k = map(int, input().split())
 coins = [int(input()) for _ in range(n)]
+
 def bfs():
     visited = [0] * (k+1)
     queue = deque()

@@ -5,6 +5,7 @@ import heapq
 input = sys.stdin.readline
 n = int(input())
 rooms = [input() for _ in range(n)]
+
 # 이동할 방향 (↓ → ↑ ←)
 x_info = [0, -1, 0, 1]
 y_info = [1, 0, -1, 0]

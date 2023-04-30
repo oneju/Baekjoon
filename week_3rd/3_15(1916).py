@@ -26,5 +26,6 @@ def dijkstra(start,end):
                     graph[next[1]] = next[0] + cost
                     heapq.heappush(heap,(graph[next[1]],next[1]))
     return graph
+
 graph = dijkstra(start-1,end-1)
 print(graph[end-1])

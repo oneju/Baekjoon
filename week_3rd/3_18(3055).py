@@ -37,6 +37,7 @@ for i in range(r):
             queue.append((i,j))
         elif forest_map[i][j] == 'D':
             dx,dy = i, j
+            
 for i in range(r):
     for j in range(c):
         if forest_map[i][j] == '*':

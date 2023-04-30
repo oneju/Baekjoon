@@ -18,6 +18,7 @@ def bfs(start):
     queue.append(start)
     visited = [0]*N
     visited[start] = 1
+    
     while queue:
         city = queue.popleft()
             

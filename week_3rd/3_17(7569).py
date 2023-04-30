@@ -26,7 +26,6 @@ def bfs():
 
     while queue:
         z,x,y = queue.popleft()
-        
         for i in range(6):
             zz = z + z_info[i]
             xx = x + x_info[i]
