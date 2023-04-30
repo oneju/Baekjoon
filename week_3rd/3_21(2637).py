@@ -11,6 +11,7 @@ for _ in range(m):
     x,y,k = map(int,input().split())
     need[y-1].append([x-1,k])
     indegree[x-1]+=1
+
 # need = [[[4, 2]], [[4, 2]], [[5, 3]], [[5, 4], [6, 5]], [[6, 2], [5, 2]], [[6, 3]], []]       
 # indegree = [0, 0, 0, 0, 2, 3, 3]
     

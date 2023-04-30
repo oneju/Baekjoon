@@ -15,7 +15,6 @@ for _ in range(m):
     indegree[b-1]+=1
     
 T = []
-
 visited = [0] * n
 
 def topological(i):
