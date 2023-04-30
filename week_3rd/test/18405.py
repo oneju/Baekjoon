@@ -5,7 +5,7 @@ from collections import deque
 
 input = sys.stdin.readline
 n,k = map(int,input().split())
-virus = [list(map(int,input().strip().split())) for _ in range(n)]
+virus = [list(map(int,input().split())) for _ in range(n)]
 s,x,y = map(int,input().split())
 
 arr = []
