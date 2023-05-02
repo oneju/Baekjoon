@@ -1,5 +1,6 @@
 # 외판원 순회
 # https://www.acmicpc.net/problem/2098
+
 # https://maivve.tistory.com/306
 
 import sys
@@ -15,6 +16,7 @@ for i in range(N):
 def tsp(city, visited):
     # 모든 도시를 방문했다면 출발도시로 돌아오는 값 리턴
     if visited == (1<<N)-1:
+        # 못가는 도시는 0으로 저장되어있으니까 예외
         if lst[city][0] != 0:return lst[city][0]
         else:return sys.maxsize
     # 이미 값이 존재하다면 있는 값 리턴
