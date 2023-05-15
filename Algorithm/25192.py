@@ -3,16 +3,15 @@
 import sys
 input = sys.stdin.readline
 n = int(input())
-gg = []
+gg = set()
 ans = 0
 for _ in range(n):
     chat = input().strip()
     if chat == 'ENTER':
-        gom = set(gg)
-        ans += len(gom)
-        gg = []
+        ans += len(gg)
+        gg = set()
         continue
-    gg.append(chat)
+    gg.add(chat)
 gom = set(gg)
 ans+=len(gom)
 print(ans)
