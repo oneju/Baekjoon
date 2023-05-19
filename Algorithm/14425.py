@@ -3,9 +3,9 @@
 import sys
 input = sys.stdin.readline
 n,m = map(int,input().split())
-S = []
+S = {}
 for _ in range(n):
-    S.append(input().strip())
+    S[input().strip()] = 1
 ans = 0
 for _ in range(m):
     word = input().strip()
