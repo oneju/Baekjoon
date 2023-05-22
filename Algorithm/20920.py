@@ -9,6 +9,5 @@ for _ in range(n):
     if len(word) >= m:
         if word in mem:mem[word]+=1
         else:mem[word] = 1
-print()
 mem = sorted(mem.items(), key=lambda x:(-x[1],-len(x[0]),x[0]))
 [print(word[0])for word in mem]
