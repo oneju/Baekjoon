@@ -4,7 +4,7 @@ import sys
 input = sys.stdin.readline
 n,m = map(int,input().split())
 se = si = 1000
-price = 1000*20
+price = sys.maxsize
 for _ in range(m):
     e,i = map(int,input().split())
     se = min(se,e)
