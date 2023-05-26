@@ -10,5 +10,5 @@ for _ in range(m):
     se = min(se,e)
     si = min(si,i)
 price_s = (se*(n//6)) + (si*(n%6))
-price = min(price,price_s,si*n,se*((n//6)+1))
+price = min(price_s,si*n,se*((n//6)+1))
 print(price)
