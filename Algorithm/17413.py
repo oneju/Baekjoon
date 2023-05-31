@@ -20,5 +20,6 @@ for a in S:
             ans+=word
             word = ''
             tag = 0
-if word:ans+=word[::-1]
+if word:
+    ans+=word[::-1]
 print(ans)
