@@ -1,7 +1,6 @@
 # 유기농 배추
 # https://www.acmicpc.net/problem/1012
 import sys
-from collections import deque
 input = sys.stdin.readline
 T = int(input())
 dir_x = [1,-1,0,0]
