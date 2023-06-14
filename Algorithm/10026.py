@@ -1,6 +1,7 @@
 # 적록색약
 # https://www.acmicpc.net/problem/10026
 import sys
+sys.setrecursionlimit(10**6)
 input = sys.stdin.readline
 N = int(input())
 color_lst = [list(input())for _ in range(N)]
@@ -12,11 +13,14 @@ def dfs(x,y,c):
     yi = [-1,1,0,0]
     no = 0
     for i in range(4):
-        if x+xi[i] in range(N) and y+yi[i] in range(N):
-            if color_lst[x+xi[i]][y+yi[i]] == c and visit[x+xi[i]][y+yi[i]]==0:
-                dfs(x+xi[i],y+yi[i],c)
+        nx = x+xi[i]
+        ny = y+yi[i]
+        if 0<=x+xi[i]<N and 0<=y+yi[i]<N:
+            if color_lst[nx][ny] == c and visit[nx][ny]==0:
+                dfs(nx,ny,c)
                 no = 1
     if no==0:return
+
 cnt_a = cnt_b = 0
 visit = [[0]*N for _ in range(N)]
 for i in range(N):
