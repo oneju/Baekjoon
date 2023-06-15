@@ -10,7 +10,6 @@ visit = [[0]*N for _ in range(N)]
 xi = [0,0,1,-1]
 yi = [1,-1,0,0]
 
-'''
 from collections import deque
 
 def bfs(x,y,a):
@@ -24,7 +23,7 @@ def bfs(x,y,a):
                 if lst_h[nx][ny] > a and visit[nx][ny] == 0:
                     queue.append([nx,ny])
                     visit[nx][ny] = 1
-'''
+
 def dfs(x,y,a):
     for i in range(4):
         nx = x+xi[i]
@@ -52,6 +51,7 @@ for a in range(101):
     ans = max(ans,temp)
 
     if temp == 0: break
+
 '''
 ↓ 아직도 이게 왜 안되는지 모르겠어요
 a = 1
