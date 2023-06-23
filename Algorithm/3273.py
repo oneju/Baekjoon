@@ -3,19 +3,20 @@
 import sys
 input = sys.stdin.readline
 n = int(input())
-A = list(map(int,input().split()))
+a = list(map(int,input().split()))
 x = int(input())
-A.sort()
-a = 0
-b = n-1
+a.sort()
+i = 0
+j = n-1
 cnt = 0
-while a<b:
-    if A[a]+A[b] == x:
+while i<j:
+    add = a[i]+a[j]
+    if add == x:
         cnt+=1
-        a+=1
-        b-=1
-    elif A[a]+A[b] > x:
-        b-=1
+        i+=1
+        j-=1
+    elif add > x:
+        j-=1
     else:
-        a+=1
+        i+=1
 print(cnt)
