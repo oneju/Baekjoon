@@ -20,4 +20,5 @@ const perm = (list, len) => {
         }
     }
 }
+
 perm([],0);
