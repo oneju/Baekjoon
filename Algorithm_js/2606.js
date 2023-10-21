@@ -13,10 +13,11 @@ for (let i = 0; i < input[1]; i++) {
 }
 const visited = Array(+input[0]).fill(0);
 let cnt = 0;
+visited[0] = 1;
 const dfs = (com) => {
   for (const next of networks[com]) {
-    visited[next] = 1;
     if (visited[next] === 0) {
+      visited[next] = 1;
       cnt += 1;
       dfs(next);
     }
